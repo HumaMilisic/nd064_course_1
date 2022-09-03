@@ -43,4 +43,4 @@ jobs:
           file: ./exercises/python-helloworld/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: humamilisic/nd064:latest
+          tags: humamilisic/nd064:py-latest
