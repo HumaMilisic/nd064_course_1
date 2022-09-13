@@ -1,0 +1,10 @@
+apiVersion: v1
+name: techtrends
+description: techtrends
+keywords:
+- python
+- techtrends
+version: 1.0.0
+maintainers:
+- name: huma
+  email: dummy@dummy.dummy
