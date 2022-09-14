@@ -5,9 +5,9 @@ metadata:
     app: techtrends
     tag: alpine
   name: techtrends
-  namespace: sandbox
+  namespace: {{ .Values.namespace.name }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: techtrends
@@ -25,24 +25,24 @@ spec:
     spec:
       containers:
       - image: humamilisic/techtrends:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
         livenessProbe:
           httpGet:
-            path: /healthz
-            port: 3111
+            path: {{ .Values.livenessProbePath }}
+            port: {{ .Values.containerPort }}
           initialDelaySeconds: 3
           periodSeconds: 3
         readinessProbe:
           httpGet:
-            path: /healthz
-            port: 3111
+            path: {{ .Values.readinessProbePath }}
+            port: {{ .Values.containerPort }}
           initialDelaySeconds: 3
           periodSeconds: 3
         resources:
           limits:
-            cpu: 500m
-            memory: 128Mi
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
           requests:
-            cpu: 250m
-            memory: 64Mi
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}

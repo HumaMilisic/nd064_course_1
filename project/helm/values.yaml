@@ -6,6 +6,7 @@ service:
   targetPort: 3111
   protocol: TCP
   type: ClusterIP
+
 image:
   pullPolicy: IfNotPresent
   repository: techtrends
