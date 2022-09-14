@@ -24,7 +24,7 @@ spec:
         tag: alpine
     spec:
       containers:
-      - image: humamilisic/techtrends:latest
+      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
         livenessProbe:
