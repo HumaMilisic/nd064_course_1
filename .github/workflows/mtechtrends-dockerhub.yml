@@ -45,4 +45,4 @@ jobs:
           file: ./project/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: humamilisic/techtrends:latest,humamilisic/techtrends:"$GITHUB_SHA$GITHUB_RUN_NUMBER"
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest
