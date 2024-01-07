@@ -43,6 +43,4 @@ jobs:
           file: ./project/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: |
-            humamilisic/techtrends:latest ,
-            humamilisic/techtrends:${{ env.GITHUB_SHA }}
+          tags: humamilisic/techtrends:latest , humamilisic/techtrends:${{ env.GITHUB_SHA }}
