@@ -44,5 +44,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}:latest ,
-            ${{ secrets.DOCKER_HUB_USERNAME }}:${{ env.GITHUB_SHA }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/techtrends:latest ,
+            ${{ secrets.DOCKER_HUB_USERNAME }}/techtrends:${{ env.GITHUB_SHA }}
