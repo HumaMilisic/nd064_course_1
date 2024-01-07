@@ -45,4 +45,4 @@ jobs:
           file: ./project/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest,${{ secrets.DOCKERHUB_USERNAME }}/techtrends:${{ github.run.number}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest,${{ secrets.DOCKERHUB_USERNAME }}/techtrends:run$GITHUB_RUN_NUMBER
