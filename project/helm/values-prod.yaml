@@ -11,7 +11,7 @@ image:
   repository: humamilisic/techtrends
   tag: latest
 
-replicaCount: 5
+replicaCount: 10
 
 resources:
   requests:
